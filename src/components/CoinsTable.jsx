@@ -56,7 +56,6 @@ const CoinsTable = () => {
             primary: {
                 main: '#011220',
             },
-            type: 'dark',
         },
     })
 
@@ -93,7 +92,10 @@ const CoinsTable = () => {
                 <TextField
                     label="Search For a Crypto Currency.."
                     variant="outlined"
-                    style={{ marginBottom: 20, width: '100%' }}
+                    style={{
+                        marginBottom: 20,
+                        width: '100%',
+                    }}
                     onChange={(e) => setSearch(e.target.value)}
                 />
                 <TableContainer component={Paper}>
@@ -174,6 +176,7 @@ const CoinsTable = () => {
                                                                 textTransform:
                                                                     'uppercase',
                                                                 fontSize: 22,
+                                                                color: 'white',
                                                             }}
                                                         >
                                                             {row.symbol}
@@ -187,7 +190,10 @@ const CoinsTable = () => {
                                                         </span>
                                                     </div>
                                                 </TableCell>
-                                                <TableCell align="right">
+                                                <TableCell
+                                                    align="right"
+                                                    style={{ color: 'white' }}
+                                                >
                                                     {symbol}{' '}
                                                     {numberWithCommas(
                                                         row.current_price.toFixed(
@@ -211,7 +217,10 @@ const CoinsTable = () => {
                                                     )}
                                                     %
                                                 </TableCell>
-                                                <TableCell align="right">
+                                                <TableCell
+                                                    align="right"
+                                                    style={{ color: 'white' }}
+                                                >
                                                     {symbol}{' '}
                                                     {numberWithCommas(
                                                         row.market_cap
@@ -234,7 +243,6 @@ const CoinsTable = () => {
                         width: '100%',
                         display: 'flex',
                         justifyContent: 'center',
-                        backgroundColor: 'black',
                     }}
                     classes={{ ul: classes.pagination }}
                     onChange={(_, value) => {

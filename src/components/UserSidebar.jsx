@@ -159,8 +159,8 @@ export default function UserSidebar() {
                                 <div className={classes.watchlist}>
                                     <span
                                         style={{
+                                            color: 'black',
                                             fontSize: 15,
-                                            textShadow: '0 0 5px black',
                                         }}
                                     >
                                         Watchlist
@@ -199,7 +199,7 @@ export default function UserSidebar() {
                                                     </span>
                                                 </div>
                                             )
-                                        else return <div key={coin.id}></div>
+                                        else return null
                                     })}
                                 </div>
                             </div>
